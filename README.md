@@ -10,7 +10,7 @@
   2. validation key name 'example-validator'
   3. validation key path '/etc/chef/example-validator.pem'
 4. DNS for the Chef server FQDN or the Chef server url in /etc/hosts of the node
-5. The environment set must exist on the Chef server
+5. The environment set in the install command must exist on the Chef server
 
 ## Install command
 `sudo sh chef-full.sh CHEF_INSTALL_URL CHEF_VERSION ENVIRONMENT`
@@ -21,6 +21,18 @@
 ## Usage
 
 ### Clone this repo into /etc/chef on a node
+```
+sudo git clone https://github.com/stephenlauck/chef-install.git /etc/chef
+cd /etc/chef
+```
 
+### Add Chef server url to /etc/hosts
 
-`sudo sh chef-full.sh https://chef.io/chef/install.sh 12.3.0-1 dev`
+```
+33.33.33.10 chef.example.com
+```
+
+### Run install script
+```
+sudo sh chef-full.sh https://chef.io/chef/install.sh 12.3.0-1 dev
+```
