@@ -212,4 +212,4 @@ mkdir -p /etc/chef/ohai/hints
 
 echo "Starting first Chef Client run..."
 
-chef-client -j /etc/chef/first-boot.json
+chef-client -j /etc/chef/first-boot.json -E $3
